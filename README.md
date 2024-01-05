@@ -1,2 +1,2 @@
-# Demo-for-jenkins
-DemoLearner: For learning Jenkins
+# Demo-jenkins-Deploy
+Demo-jenkins-Deploy
