@@ -22,6 +22,7 @@ pipeline {
                         echo "npm is not installed. Installing npm..."
                         sh "apt-get update && apt-get install -y npm"
                     } else {
+                        sh "nvm install 18.13"
                         echo "npm is already installed."
                     }
                 }
