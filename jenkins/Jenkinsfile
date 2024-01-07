@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git Clone') {
             steps {
-                git branch: 'develop', changelog: false, poll: false, url: 'https://github.com/PrinceKakadiya30/Demo-for-jenkins.git'
+                git branch: 'develop', credentialsId: 'baf06dd1-1a0c-4dd3-a7ac-8e8748f2648d',changelog: false, poll: false, url: 'https://github.com/PrinceKakadiya30/Demo-for-jenkins.git'
             }
         }
 
