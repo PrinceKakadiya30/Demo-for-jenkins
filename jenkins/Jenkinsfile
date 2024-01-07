@@ -6,11 +6,11 @@ pipeline {
         git 'Default'
     }
     stages {
-        //stage('Git Clone') {
-           //steps {
-                //git branch: 'develop', credentialsId: '0896e972-8cca-4c39-9a6a-d442d73f6188',changelog: false, poll: false, url: 'https://github.com/PrinceKakadiya30/Demo-for-jenkins.git'
-            //}
-        //}
+        stage('Git Clone') {
+           steps {
+                git branch: 'develop', credentialsId: '0896e972-8cca-4c39-9a6a-d442d73f6188',changelog: false, poll: false, url: 'https://github.com/PrinceKakadiya30/Demo-for-jenkins.git'
+            }
+        }
 
         stage('Pre Build') {
             steps {
