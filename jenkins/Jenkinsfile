@@ -4,6 +4,7 @@ pipeline {
     tools {
         
         git 'Default'
+        nodejs 'NodeJS'
     }
     stages {
         stage('Git Clone') {
