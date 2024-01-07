@@ -15,9 +15,15 @@ pipeline {
         stage('Pre Build') {
             steps {
                 script {
-                    sh '''
-                        npm install
-                    '''
+                    def npmInstalled = sh(script: 'command -v npm', returnStatus: true) == 0
+
+                    // Install npm if not installed
+                    if (!npmInstalled) {
+                        echo "npm is not installed. Installing npm..."
+                        sh "apt-get update && apt-get install -y npm"
+                    } else {
+                        echo "npm is already installed."
+                    }
                 }
             }
         }
