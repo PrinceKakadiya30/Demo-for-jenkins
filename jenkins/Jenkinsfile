@@ -1,6 +1,10 @@
 pipeline {
     agent {label 'Agent-1'}
 
+    tools {
+        
+        git 'Default'
+    }
     stages {
         stage('Git Clone') {
             steps {
